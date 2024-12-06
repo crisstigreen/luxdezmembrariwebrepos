@@ -278,7 +278,9 @@ async function insertOrder(customerID, id) {
     };
 
     try {
-        const response = await fetch('${API_BASE_URL}/Orders', {
+
+        const url = `${API_BASE_URL}/Orders`;
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
