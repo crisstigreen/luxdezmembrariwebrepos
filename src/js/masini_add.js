@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async  () => {
 
 function populatePieseMasiniTable() {
     const carId = getQueryParam('id');
-    const url = '${API_BASE_URL}/InfoCars/GetById?IdMasina=' + carId;
+    const url =   `${API_BASE_URL}/InfoCars/GetById?IdMasina=` +  carId; 
         
     fetch(url)
         .then(response => {
@@ -255,7 +255,7 @@ function registerPiesaCar() {
     };
     debugger;
     const piesaId = getQueryParam('id');
-    insert(piesa,'${API_BASE_URL}/Piese');            
+    insert(piesa,`${API_BASE_URL}/Piese`);         
 }
 
 //Add masina
@@ -331,7 +331,7 @@ function registerCar() {
         update(carId, data, `${API_BASE_URL}/CarsRegister/${carId}`)        
     }  
     else{
-        insert(data,'${API_BASE_URL}/CarsRegister');    
+        insert(data,`${API_BASE_URL}/CarsRegister`);      
     }        
 }
 
@@ -371,14 +371,14 @@ async function registerPiesaMasina() {
     };
 
     try {
-        const carData = await insert(data, '${API_BASE_URL}/Piese');
+        const carData = await insert(data, `${API_BASE_URL}/Piese`);  
         const masinaId = getQueryParam('id');
         const piesaMasina = {
             IdMasina: masinaId,
             IdPiesa: carData.id
         };
 
-        await insert(piesaMasina, '${API_BASE_URL}/InfoCars');
+        await insert(piesaMasina, `${API_BASE_URL}/InfoCars`); 
         populatePieseMasiniTable();
         console.log('Inserare reușită pentru piesa:', carData);
     } catch (error) {

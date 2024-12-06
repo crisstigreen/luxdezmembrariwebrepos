@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', async  () => {  
     //debugger; 
-    await getCars('${API_BASE_URL}/Cars/get');       
+    await getCars(`${API_BASE_URL}/Cars/get`);      
     await fetchAndPopulatePieseData(); 
    
     const piesaId = getQueryParam('id');
@@ -215,7 +215,7 @@ function registerPiesa() {
     }  
     else{
         //insertPiesa(piesa);   
-        insert(piesa,'${API_BASE_URL}/Piese');    
+        insert(piesa,`${API_BASE_URL}/Piese`);      
         showInsertSuccessMessage();
     }
 

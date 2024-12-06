@@ -152,52 +152,7 @@ async function get_details(id) {
 
         const url = `masini_add.html?id=${id}`;
         window.open(url, '_blank');
-
-        //try {
-        //    const url = `${API_BASE_URL}/Piese/async/${IdPiesa}`;
-        //    const response = await fetch(url);
-
-        //    if (!response.ok) {
-        //        throw new Error('Eroare la obținerea detaliilor piesei');
-        //    }
-
-        //    const piesa = await response.json();
-
-        //    document.getElementById('tb_piesa').value = piesa.piesa;
-        //    document.getElementById('tb_titlu').value = piesa.titlu;
-        //    document.getElementById('tb_descriere').value = piesa.descriere;
-        //    document.getElementById('tb_imagini').value = piesa.imagini;
-        //    document.getElementById('tb_pret').value = piesa.pret;
-        //    document.getElementById('tb_bucati').value = piesa.bucati;
-        //    document.getElementById('tb_codPiesa').value = piesa.codPiesa;
-        //    document.getElementById('tb_an').value = piesa.an;
-
-        //    // Setează marca
-        //    const selectMarca = document.getElementById('ddd_cars');
-        //    const marca = piesa.marca;
-
-        //    for (let i = 0; i < selectMarca.options.length; i++) {
-        //        if (selectMarca.options[i].text === marca) {
-        //            selectMarca.selectedIndex = i;
-        //            break;
-        //        }
-        //    }
-
-        //    // Populează și setează modelul
-        //    await populateModelsDropdown(marca); // Așteaptă să se populeze dropdown-ul de modele
-
-        //    const selectModel = document.getElementById('ddd_model');
-        //    const model = piesa.model;
-        //    for (let i = 0; i < selectModel.options.length; i++) {
-        //        if (selectModel.options[i].text === model) {
-        //            selectModel.selectedIndex = i;
-        //            break;
-        //        }
-        //    }
-        //} catch (error) {
-        //    console.error('Eroare:', error);
-        //    document.getElementById('detaliiPiesa').innerText = 'A apărut o eroare la încărcarea detaliilor piesei.';
-        //}
+      
     } else {
         //document.getElementById('detaliiPiesa').innerText = 'Piesa nu a fost găsită.';
     }

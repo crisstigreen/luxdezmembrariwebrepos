@@ -165,7 +165,8 @@ async function sendResetPassword(event) {
         Active: true               
     };
     //db
-    var x = await insert(code,'${API_BASE_URL}/UsersCodes');  
+    const url = `${API_BASE_URL}/UsersCodes`;
+    var x = await insert(code, url);  
     localStorage.setItem('codeId', x.id);
     localStorage.setItem('resetCode', resetCode);
     localStorage.setItem('email', email);

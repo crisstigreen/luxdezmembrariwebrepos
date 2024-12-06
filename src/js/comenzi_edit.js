@@ -304,7 +304,7 @@ function getQueryParam(param) {
 
 function populateResponsabilDropdown() {
     debugger;
-    const url = '${API_BASE_URL}/Users/light';
+    const url = `${API_BASE_URL}/Users/light`;    
     
     return fetch(url) // Returnează promisiunea
         .then(response => {

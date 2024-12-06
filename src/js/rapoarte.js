@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async  () => {
 
 
 function populateResponsabilDiv() {
-    const url = '${API_BASE_URL}/Users';
+    const url = `${API_BASE_URL}/Users`; // '${API_BASE_URL}/Users';
     
     return fetch(url) // Returnează promisiunea
         .then(response => {

@@ -337,7 +337,7 @@ async function getCarsForDropdown() {
     try {
         //cristi test shoppp
         const url = `${API_BASE_URL}/Cars/get`;
-        const response = await fetch(url, {   //'${API_BASE_URL}/Cars/get'
+        const response = await fetch(url, {   
             method: 'GET'
         });
 
