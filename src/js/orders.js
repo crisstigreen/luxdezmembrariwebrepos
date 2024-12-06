@@ -225,7 +225,9 @@ async function insertCustomerAndOrder() {
                 userId: sessionStorage.getItem('userId')                             
             };
 
-            const response = await fetch('${API_BASE_URL}/Customer', {
+            const url = `${API_BASE_URL}/Customer`;
+
+            const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
