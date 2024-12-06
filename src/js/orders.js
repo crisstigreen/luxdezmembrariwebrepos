@@ -40,8 +40,8 @@ async function GetPretFaraTVA(pret) {
 
 
 //functii de populare campuri
-async function GetTVA() {
-    const url = '${API_BASE_URL}/InfoCars/GetTVA';
+async function GetTVA() {    
+    const url = `${API_BASE_URL}/InfoCars/GetTVA`;
     
     try {
         const response = await fetch(url); // Așteaptă răspunsul
