@@ -335,7 +335,9 @@ function populateApiPath(){
 //API
 async function getCarsForDropdown() {
     try {
-        const response = await fetch('${API_BASE_URL}/Cars/get', {
+        //cristi test shoppp
+        const url = `${API_BASE_URL}/Cars/get`;
+        const response = await fetch(url, {   //'${API_BASE_URL}/Cars/get'
             method: 'GET'
         });
 
