@@ -307,7 +307,7 @@ async function getGeneratiiForDropdown(modelId) {
 
 //POPULATE OTHERS
 function populateCombustibilDropdown() {
-    const url = '${API_BASE_URL}/InfoCars/GetCombustibil';
+    const url = `${API_BASE_URL}/InfoCars/GetCombustibil`;
     
     return fetch(url) // Returnează promisiunea
         .then(response => {
@@ -332,7 +332,7 @@ function populateCombustibilDropdown() {
 }
 function populateTractiuneDropdown() {
     debugger;
-    const url = '${API_BASE_URL}/InfoCars/GetTractiune';
+    const url =  `${API_BASE_URL}/InfoCars/GetTractiune`; 
     
     return fetch(url) // Returnează promisiunea
         .then(response => {
@@ -356,7 +356,7 @@ function populateTractiuneDropdown() {
         });
 }
 function populateTipCutieDropdown() {
-    const url = '${API_BASE_URL}/InfoCars/GetTipCutieViteze'; // Presupunem că acesta este endpoint-ul pentru tipul de cutie viteze
+    const url = `${API_BASE_URL}/InfoCars/GetTipCutieViteze`;
     
     return fetch(url)
         .then(response => {
@@ -381,7 +381,7 @@ function populateTipCutieDropdown() {
 }
 function populateCuloareDropdown() {
     debugger;
-    const url = '${API_BASE_URL}/InfoCars/GetCuloare'; // Presupunem că acesta este endpoint-ul pentru culori
+    const url = `${API_BASE_URL}/InfoCars/GetCuloare`;
     
     return fetch(url)
         .then(response => {
@@ -406,7 +406,7 @@ function populateCuloareDropdown() {
 }
 function populateTipCaroserieDropdown() {
     //debugger;
-    const url = '${API_BASE_URL}/InfoCars/GetTipCaroserie'; 
+    const url = `${API_BASE_URL}/InfoCars/GetTipCaroserie`;
     
     return fetch(url)
         .then(response => {
