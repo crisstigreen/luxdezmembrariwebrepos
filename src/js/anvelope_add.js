@@ -229,8 +229,8 @@ function registerAnvelopa() {
 }
 
 function insertAnvelopa(anv){
-    // Trimite cererea POST către API
-    fetch('${API_BASE_URL}/Anvelope', {
+    const url = `${API_BASE_URL}/Anvelope`;
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -351,7 +351,8 @@ function getQueryParam(param) {
 async function getProducatoriForDropdown() {
     debugger;
     try {
-        const response = await fetch('${API_BASE_URL}/ProducatoriAnv', {
+        const url = `${API_BASE_URL}/ProducatoriAnv`;
+        const response = await fetch(url, {
             method: 'GET'
         });
 

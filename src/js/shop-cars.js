@@ -271,7 +271,8 @@ function populateApiPath(){
 async function getCarsForDropdown() {
     debugger;
     try {
-        const response = await fetch('${API_BASE_URL}/Cars/get', {
+        const url = `${API_BASE_URL}/Cars/get`;
+        const response = await fetch(url, {
             method: 'GET'
         });
 

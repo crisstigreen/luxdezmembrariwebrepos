@@ -31,7 +31,8 @@ function loginUser() {
         Password: pass
     };
 
-    fetch('${API_BASE_URL}/Users/login', {
+    const url = `${API_BASE_URL}/Users/login`;
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -115,8 +116,8 @@ function registerUser() {
 
 
 function insertUser(user){
-    // Trimite cererea POST către API
-    fetch('${API_BASE_URL}/Users', {
+    const url = `${API_BASE_URL}/Users`;
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

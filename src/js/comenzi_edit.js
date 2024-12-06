@@ -664,7 +664,8 @@ async function postOrderHistory(orderId) {
     };
 
     try {
-        const response = await fetch('${API_BASE_URL}/OrdersHistory', {
+        const url = `${API_BASE_URL}/OrdersHistory`;
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -690,7 +691,8 @@ async function postOrderHistory(orderId) {
 
 async function updateOrderDefault(order) {
     try {
-        const response = await fetch('${API_BASE_URL}/Orders/updateOrder', {
+        const url = `${API_BASE_URL}/Orders/updateOrder`;
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

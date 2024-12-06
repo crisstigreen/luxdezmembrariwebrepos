@@ -85,7 +85,8 @@ async function uploadImagini(files, itemId, tipItem) {
     formData.append('tipItem', tipItem);
 
     try {        
-        const response = await fetch('${API_BASE_URL}/Imagini/UploadImagini', {
+        const url = `${API_BASE_URL}/Imagini/UploadImagini`;
+        const response = await fetch(url, {
             method: 'POST',
             body: formData
         });
@@ -497,8 +498,8 @@ function adaugaPiesaCompat(){
         generatie: gener.value
     };
     
-    // Trimite cererea POST către API
-    fetch('${API_BASE_URL}/Compat', {
+    const url = `${API_BASE_URL}/Compat`;
+    fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
